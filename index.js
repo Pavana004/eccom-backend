@@ -33,7 +33,9 @@ app.use(express.json());
 app.use(cors())
 app.use("/api",router);
 
-
+app.use("/", (req, res) => {
+    res.json({ message: "server starting...." });
+  });
 
 
 
